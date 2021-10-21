@@ -13,14 +13,22 @@ import java.util.Objects;
  **/
 
 public class CarCash {
-	static Map<Integer, Car> cash = new HashMap<>();
+	private static Map<Integer, Car> cash = new HashMap<>();
 
-	public static Car getTreeType(Integer id, String marka, Integer maxSpeed, Integer numOfPlaces, String color, Integer year) {
+	public static Car getCar(Integer id, String marka, Integer maxSpeed, Integer numOfPlaces, String color, Integer year) {
 		Car result = cash.get(id);
 		if (Objects.isNull(result)) {
 			result = new Car(id, marka, maxSpeed, numOfPlaces, color, year);
-			treeTypes.put(name, result);
+			cash.put(id, result);
 		}
 		return result;
+	}
+
+	public static void deleteCar(Integer id) {
+		cash.remove(id);
+	}
+
+	public static void showCash() {
+		System.out.println(cash);
 	}
 }
