@@ -22,7 +22,7 @@ public class MainDepartment implements Department{
 	@Override
 	public String createReport() {
 		StringBuilder mainReport = new StringBuilder("main department report \n");
-		departments.forEach(item -> mainReport.append(item.createReport() + "\n"));
+		departments.forEach(item -> mainReport.append(item.createReport()).append("\n"));
 		return mainReport.toString();
 	}
 }

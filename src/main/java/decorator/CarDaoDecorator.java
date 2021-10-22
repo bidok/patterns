@@ -12,8 +12,5 @@ public class CarDaoDecorator implements GenericDao {
 		carDao.get();
 	}
 
-	@Override
-	public void save() {
-		carDao.save();
-	}
+
 }
