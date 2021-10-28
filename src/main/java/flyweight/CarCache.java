@@ -9,10 +9,10 @@ import java.util.Objects;
 /**
  * @author : Vasyl Bidiak
  * @created : 21.10.2021
- * @className : CarCash
+ * @className : CarCache
  **/
 
-public class CarCash {
+public class CarCache {
 	private static Map<Integer, Car> cash = new HashMap<>();
 
 	public static Car getCar(Integer id, String marka, Integer maxSpeed, Integer numOfPlaces, String color, Integer year) {

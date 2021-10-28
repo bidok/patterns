@@ -14,6 +14,6 @@ public class Order {
 	public Order(Integer id, String number, Integer carId, String marka, Integer maxSpeed, Integer numOfPlaces, String color, Integer year) {
 		this.id = id;
 		this.number = number;
-		this.car = CarCash.getCar(carId, marka, maxSpeed, numOfPlaces, color, year);
+		this.car = CarCache.getCar(carId, marka, maxSpeed, numOfPlaces, color, year);
 	}
 }

@@ -1,14 +1,14 @@
 package decorator;
 
 public class CarService {
-	CarDao carDao = new CarDao();
+	GenericDao carDao = new CarDaoGettingDecorator();
 
 	public void get() {
 		carDao.get();
 	}
 
 	public void getBySpecificField() {
-		CarDaoGettingDecorator carDaoGettingDecorator = new CarDaoGettingDecorator(carDao);
+		CarDaoGettingDecorator carDaoGettingDecorator = (CarDaoGettingDecorator)carDao;
 		carDaoGettingDecorator.getBySpecificField();
 	}
 }

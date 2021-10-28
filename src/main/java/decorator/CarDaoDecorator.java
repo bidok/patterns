@@ -1,11 +1,8 @@
 package decorator;
 
 public class CarDaoDecorator implements GenericDao {
-	protected CarDao carDao;
 
-	public CarDaoDecorator(CarDao carDao) {
-		this.carDao = carDao;
-	}
+	private final CarDao carDao = new CarDao();
 
 	@Override
 	public void get() {
