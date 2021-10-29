@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class CarDaoCache implements GenericDao {
 	private final CarDao carDao = new CarDao();
-	private static Map<Integer, Car> cache = new HashMap<>();
+	private static final Map<Integer, Car> cache = new HashMap<>();
 
 	@Override
 	public Car getCar(Integer id) {
@@ -16,14 +16,8 @@ public class CarDaoCache implements GenericDao {
 			return cache.get(id);
 		} else {
 			Car car = carDao.getCar(id);
-			addCar(car);
-			return car;
-		}
-	}
-
-	public void addCar(Car car) {
-		if (!cache.containsKey(car.getId())){
 			cache.put(car.getId(), car);
+			return car;
 		}
 	}
 
