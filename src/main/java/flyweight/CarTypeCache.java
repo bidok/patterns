@@ -3,7 +3,7 @@ package flyweight;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CarFactory {
+public class CarTypeCache {
 	private static final Map<String, CarType> map = new HashMap<>();
 
 	public static CarType getCarType(String bodyType, Integer numOfDoors) {

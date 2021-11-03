@@ -12,7 +12,7 @@ public class Car {
 
 	public Car(String name, String carBody, Integer numOfDoors, Integer maxSpeed) {
 		this.name = name;
-		carType = CarFactory.getCarType(carBody, numOfDoors);
+		carType = CarTypeCache.getCarType(carBody, numOfDoors);
 		this.maxSpeed = maxSpeed;
 	}
 }
