@@ -1,4 +1,4 @@
-package chaneofresponsibility;
+package chainofresponsibility;
 
 import lombok.NoArgsConstructor;
 
